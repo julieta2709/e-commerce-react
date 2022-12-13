@@ -5,21 +5,23 @@ const ItemCount = ({ stockItems }) => {
     const [clicks, setClicks] = useState(1);
     const [stock, setStock] = useState(stockItems);
 
-    useEffect(()=>{
+    useEffect(() => {
         setStock(stockItems)
- 
-     },[stockItems])
 
+    }, [stockItems])
+
+    /* Función para incrementar contador */
     const agregarProducto = () => {
         setClicks(clicks + 1);
     };
-
+    /* Función para decrementar el contador */
     const sacarProducto = () => {
         setClicks(clicks - 1);
     };
-
+    /* Función para agregar productos al carrito y no sobrepasar el stock disponible */
     const onAdd = () => {
         if (clicks <= stock) {
+            console.log("Agregaste " + clicks + " productos al carro")
             setStock(stock - clicks);
             setClicks(1);
         }
