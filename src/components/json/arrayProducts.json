@@ -1,0 +1,100 @@
+[{
+    "id":1,
+    "title":"Cupcake de Chocolate",
+    "description":"Cupcake de base sabor chocolate y crema de manteca",
+    "price":250,
+    "pictureUrl":"../images/Chocolate-Purple-Cupcake.svg",
+    "stock":20,
+    "categoria":"chocolate"
+},
+{
+    "id":2,
+    "title":"Cupcake Arcoiris",
+    "description":"Cupcake de base sabor chocolate y crema de manteca con los colores del arcoiris",
+    "price":280,
+    "pictureUrl":"../images/Chocolate-Rainbow-Cupcake.svg",
+    "stock":15,
+    "categoria":"chocolate"
+},
+{
+    "id":3,
+    "title":"Cupcake de Vainilla",
+    "description":"cupcake de base sabor vainilla y crema de chocolate",
+    "price":260,
+    "pictureUrl":"../images/Vanilla-Chocolate-Blue-Cupcake.svg",
+    "stock":10,
+    "categoria":"vainilla"
+},
+{
+    "id":4,
+    "title":"Cupcake Red Velvet",
+    "description":"Cupcake de base sabor chocolate y crema de manteca color rojo",
+    "price":320,
+    "pictureUrl":"../images/Vanilla-Red-Cupcake.svg",
+    "stock":5,
+    "categoria":"chocolate"
+},
+{
+    "id":5,
+    "title":"Cupcake Crema de Avellana",
+    "description":"Cupcake de base sabor vainilla y crema de chocolate y avellana",
+    "price":270,
+    "pictureUrl":"../images/CakeVainillaNutella.svg",
+    "stock":18,
+    "categoria":"vainilla"
+},
+{
+    "id":6,
+    "title":"Cupcake Goloso",
+    "description":"Cupcake de base sabor vainilla y crema de chocolate y dulce de leche",
+    "price":350,
+    "pictureUrl":"../images/VainillaChocoDDL.svg",
+    "stock":16,
+    "categoria":"vainilla"
+},
+{
+    "id":7,
+    "title":"Cupcake San Valentin",
+    "description":"Cupcake de base sabor limón y crema de manteca y granas con forma de corazón",
+    "price":290,
+    "pictureUrl":"../images/CakeLimonCorazon.svg",
+    "stock":14,
+    "categoria":"limon"
+},
+{
+    "id":8,
+    "title":"Cupcake Limón y Amapola",
+    "description":"Cupcake de base sabor limón y crema de manteca y semillas de amapola",
+    "price":250,
+    "pictureUrl":"../images/CakeLimonAmapola.svg",
+    "stock":12,
+    "categoria":"limon"
+},
+{
+    "id":9,
+    "title":"Cupcake Limón y Frutilla",
+    "description":"Cupcake de base sabor limón y crema de manteca con salsa de frutilla",
+    "price":280,
+    "pictureUrl":"../images/CakeLimonFrutilla.svg",
+    "stock":8,
+    "categoria":"limon"
+},
+{
+    "id":10,
+    "title":"Cupcake Chocolatoso",
+    "description":"Cupcake de base sabor chocolate y crema de manteca de vainilla y chocolate, con un cuadradito de chocolate",
+    "price":400,
+    "pictureUrl":"../images/CakeCremaChoco.svg",
+    "stock":6,
+    "categoria":"chocolate"
+},
+{
+    "id":11,
+    "title":"Cupcake de Cereza",
+    "description":"Cupcake de base sabor vainilla con glasé de limón y una cereza",
+    "price":330,
+    "pictureUrl":"../images/VainillaGlaseCereza.svg",
+    "stock":4,
+    "categoria":"vainilla"
+}
+]

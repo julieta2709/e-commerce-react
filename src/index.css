@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(232, 182, 232);
+}
+
+.barra {
+  background-color: rgb(76, 10, 126);
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+  margin-left: 20px;
+  padding: 1rem;
+}
+
+.cupcake {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.card {
+  background-color: rgb(206, 206, 206);
+}
+
+.card-img-top {
+ padding: 1rem;
+ height: 300px;
+}
+
+.decrement, .increment, .value {
+  width: 30px;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+}
+
+.img-fluid{
+  height: 300px;
+}
