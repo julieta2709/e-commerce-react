@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const ItemCount = ({ stockItems }) => {
+const ItemCount = ({ stock, onAdd }) => {
 
     const [clicks, setClicks] = useState(1);
-    const [stock, setStock] = useState(stockItems);
-
-    useEffect(() => {
-        setStock(stockItems)
-
-    }, [stockItems])
+    const [itemStock, setItemStock] = useState(stock);
+    const [vendido, setVendido] = useState(false);
 
     /* Función para incrementar contador */
     const agregarProducto = () => {
@@ -19,13 +16,16 @@ const ItemCount = ({ stockItems }) => {
         setClicks(clicks - 1);
     };
     /* Función para agregar productos al carrito y no sobrepasar el stock disponible */
-    const onAdd = () => {
-        if (clicks <= stock) {
-            console.log("Agregaste " + clicks + " productos al carro")
-            setStock(stock - clicks);
-            setClicks(1);
-        }
+    const addToCart = (quantity) => {
+        setItemStock(itemStock - quantity);
+        setClicks(1);
+        setVendido(true);
+        onAdd(quantity);
     }
+    useEffect(() => {
+        setItemStock(stock)
+
+    }, [stock])
 
 
     return (
@@ -34,9 +34,9 @@ const ItemCount = ({ stockItems }) => {
                 <div className="col-md-12">
                     <button type="button" className="decrement" disabled={clicks <= 1} onClick={sacarProducto}>-</button>
                     <button type="button" className="value">{clicks} </button>
-                    <button type="button" className="increment" disabled={clicks >= stock} onClick={agregarProducto}>+</button>
+                    <button type="button" className="increment" disabled={clicks >= itemStock} onClick={agregarProducto}>+</button>
                     <div>
-                        <button type="button" className="btn btn-danger btn-sm mx-4" disabled={stock <= 0} onClick={onAdd}>Agregar al carrito</button>
+                        {vendido ? <Link to={"/cart"} className="btn btn-danger btn-sm mx-4">Finalizar compra</Link> : <button type="button" className="btn btn-danger btn-sm mx-4" disabled={stock <= 0} onClick={() => { addToCart(clicks) }}>Agregar al carrito</button>}
                     </div>
                 </div>
             </div>
