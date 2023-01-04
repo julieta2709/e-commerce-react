@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import NavBar from './components/NavBar';
-import Error404 from './components/Error404';
-import CartContextProvider from './components/Context/CartContext';
+import ItemListContainer from './Containers/ItemListContainer';
+import ItemDetailContainer from './Containers/ItemDetailContainer';
+import NavBar from './Features/NavBar';
+import Error404 from './Errors/Error404';
+import CartContextProvider from './Context/CartContext';
 import Cart from './components/Cart';
+import FinCompra from './components/FinCompra';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path={"/category/:id"} element={<ItemListContainer />} />
             <Route path={"/item/:id"} element={<ItemDetailContainer />} />
             <Route path={"/cart"} element={<Cart />} />
+            <Route path={"/fincompra"} element={<FinCompra />} />
             <Route path={"*"} element={<Error404 />} />
           </Routes>
         </BrowserRouter>
