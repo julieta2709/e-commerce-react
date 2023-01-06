@@ -2,6 +2,7 @@ import { collection, getDocs, getFirestore, query, where } from "firebase/firest
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
+import Loading from "../components/Loading";
 
 
 
@@ -10,19 +11,8 @@ import ItemList from "../components/ItemList";
 const ItemListContainer = () => {
 
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { id } = useParams();
-
-    /* Insertar productos de JSON en Firestore */
-    /* useEffect(() => {
-        const db = getFirestore();
-        const itemsCollection = collection(db, "Items");
-
-        arrayProducts.forEach((documento) => {
-            addDoc(itemsCollection, documento)
-        });
-    }, []); */
-
-    /* Consulta de productos en Firestore */
 
     useEffect(() => {
         const db = getFirestore();
@@ -30,14 +20,15 @@ const ItemListContainer = () => {
         const q = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection;
         getDocs(q).then((snapShot) => {
             setItems(snapShot.docs.map((prod) =>
-                ({ id:prod.id, ...prod.data() })
+                ({ id: prod.id, ...prod.data() })
             ));
+            setLoading(false);
         });
     }, [id]);
 
     return (
         <div className="container py-5">
-            <ItemList items={items} />
+            {loading ? <Loading /> : <ItemList items={items} />}
         </div>
     )
 
