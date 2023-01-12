@@ -9,6 +9,7 @@ import CartContextProvider from './Context/CartContext';
 import Cart from './components/Cart';
 import FinCompra from './components/FinCompra';
 import Salida from './components/Salida';
+import Footer from './Features/Footer';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path={"/salida/:id"} element={<Salida />} />
             <Route path={"*"} element={<Error404 />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     </CartContextProvider>
